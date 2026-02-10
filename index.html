@@ -28,9 +28,12 @@
                             }
                         });
                         
-                        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                        const currentPage = window.location.pathname;
                         document.querySelectorAll('.nav-link').forEach(link => {
-                            if (link.getAttribute('href') === currentPage) {
+                            const href = link.getAttribute('href');
+                            if ((currentPage === '/' || currentPage === '/index.html') && href === '/') {
+                                link.classList.add('active');
+                            } else if (href !== '/' && currentPage.includes(href)) {
                                 link.classList.add('active');
                             }
                         });
@@ -75,7 +78,7 @@
     <section class="welcome">
         <div class="container">
             <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">Welcome to Monedge Home Care</h2>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 3rem;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 3rem;" class="welcome-grid">
                 <div>
                     <img src="Pictures/Baby care 8.jpg" alt="Professional Care" style="width: 100%; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
                 </div>
@@ -83,7 +86,7 @@
                     <h3 style="color: #f59d19; margin-bottom: 1rem;">Your Trusted Healthcare Partner</h3>
                     <p style="margin-bottom: 1rem;">At Monedge Home Care Services, we understand that your family deserves the best. Our professional caregivers bring compassion, expertise, and dedication to every home we serve across Kampala and surrounding areas.</p>
                     <p style="margin-bottom: 1rem;">Whether you need care for your little ones, elderly parents, or recovering patients, we provide personalized solutions that fit your schedule and budget.</p>
-                    <a href="services.html" class="btn btn-primary">Explore Our Services</a>
+                    <a href="/services" class="btn btn-primary">Explore Our Services</a>
                 </div>
             </div>
         </div>
@@ -92,7 +95,7 @@
     <section style="background: #f8f9fa; padding: 60px 0;">
         <div class="container">
             <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">How It Works</h2>
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;" class="how-it-works-grid">
                 <div style="text-align: center; padding: 2rem; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border: 1px solid #ddd; border-bottom: 3px solid #f59d19; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(245,157,25,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.05)'">
                     <div style="width: 60px; height: 60px; background: #f59d19; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 24px; font-weight: bold; color: white;">1</div>
                     <h3 style="color: #f59d19; margin-bottom: 1rem;">Book a Consultation</h3>
@@ -115,16 +118,16 @@
     <section style="padding: 60px 0;">
         <div class="container">
             <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">Our Care Services</h2>
-            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-bottom: 2rem;">
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-bottom: 2rem;" class="services-cards-grid">
                 <div style="background: linear-gradient(135deg, #f59d19, #ff8c42); padding: 3rem; border-radius: 15px; color: white; text-align: center;">
                     <h3 style="font-size: 2rem; margin-bottom: 1rem;">Baby & Junior Care</h3>
                     <p style="margin-bottom: 1.5rem;">Professional childcare services including supervision, daily care, and developmental support for your little ones.</p>
-                    <a href="services.html" class="btn" style="background: white; color: #f59d19; padding: 0.75rem 2rem; border-radius: 25px; text-decoration: none; display: inline-block;">Learn More</a>
+                    <a href="/services" class="btn" style="background: white; color: #f59d19; padding: 0.75rem 2rem; border-radius: 25px; text-decoration: none; display: inline-block;">Learn More</a>
                 </div>
                 <div style="background: linear-gradient(135deg, #3533cd, #5b59ed); padding: 3rem; border-radius: 15px; color: white; text-align: center;">
                     <h3 style="font-size: 2rem; margin-bottom: 1rem;">Elderly & Patient Care</h3>
                     <p style="margin-bottom: 1.5rem;">Compassionate care for seniors and patients including personal care, health monitoring, and companionship.</p>
-                    <a href="services.html" class="btn" style="background: white; color: #3533cd; padding: 0.75rem 2rem; border-radius: 25px; text-decoration: none; display: inline-block;">Learn More</a>
+                    <a href="/services" class="btn" style="background: white; color: #3533cd; padding: 0.75rem 2rem; border-radius: 25px; text-decoration: none; display: inline-block;">Learn More</a>
                 </div>
             </div>
         </div>
@@ -133,7 +136,7 @@
     <section style="background: #f8f9fa; padding: 60px 0;">
         <div class="container">
             <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">What Our Clients Say</h2>
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;" class="testimonials-grid">
                 <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border: 1px solid #ddd; border-bottom: 3px solid #f59d19; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(245,157,25,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.05)'">
                     <p style="font-style: italic; margin-bottom: 1rem; color: #666;">"Monedge Home Care has been a blessing for our family. The caregiver assigned to my mother is professional, caring, and reliable. Highly recommended!"</p>
                     <p style="font-weight: bold; color: #f59d19;">- Sarah M., Kampala</p>
@@ -153,7 +156,7 @@
     <section style="padding: 60px 0;">
         <div class="container">
             <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">Why Families Choose Us</h2>
-            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;">
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;" class="why-choose-grid">
                 <div style="text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 10px; border: 1px solid #ddd; border-bottom: 3px solid #f59d19; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(245,157,25,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
                     <svg width="60" height="60" viewBox="0 0 24 24" fill="#f59d19" style="margin: 0 auto 1rem; display: block;"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
                     <h3 style="color: #333; margin-bottom: 0.5rem;">Certified Caregivers</h3>
@@ -183,7 +186,7 @@
             <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Get Started?</h2>
             <p style="font-size: 1.2rem; margin-bottom: 2rem;">Book a free consultation today and discover how we can help your family</p>
             <div style="display: flex; gap: 1rem; justify-content: center;">
-                <a href="book.html" class="btn" style="background: #f59d19; color: white; padding: 1rem 2.5rem; border-radius: 30px; text-decoration: none; font-weight: bold;">Book Now</a>
+                <a href="/book" class="btn" style="background: #f59d19; color: white; padding: 1rem 2.5rem; border-radius: 30px; text-decoration: none; font-weight: bold;">Book Now</a>
                 <a href="tel:0788370505" class="btn" style="background: white; color: #3533cd; padding: 1rem 2.5rem; border-radius: 30px; text-decoration: none; font-weight: bold;">Call Us</a>
             </div>
         </div>

@@ -731,4 +731,12 @@ p {
     .mission {
         font-size: 14px;
     }
+    
+    .welcome-grid,
+    .how-it-works-grid,
+    .services-cards-grid,
+    .testimonials-grid,
+    .why-choose-grid {
+        grid-template-columns: 1fr !important;
+    }
 }
