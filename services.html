@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Monedge Home Care Services</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                
+                setTimeout(() => {
+                    const navbar = document.querySelector('.navbar');
+                    if (navbar) {
+                        window.addEventListener('scroll', function() {
+                            if (window.scrollY > 50) {
+                                navbar.classList.add('scrolled');
+                            } else {
+                                navbar.classList.remove('scrolled');
+                            }
+                        });
+                        
+                        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                        document.querySelectorAll('.nav-link').forEach(link => {
+                            if (link.getAttribute('href') === currentPage) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                }, 100);
+            })
+            .then(() => {
+                const script = document.createElement('script');
+                script.src = 'js/main.js';
+                document.body.appendChild(script);
+            });
+    </script>
+
+    <section class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('Pictures/services heroe.jpg'); background-size: cover; background-position: center;">
+        <div class="hero-content">
+            <h1>Our Services</h1>
+            <p class="tagline">Comprehensive Healthcare Solutions</p>
+            <p class="mission">Professional care services tailored to meet your family's unique needs.</p>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <div class="service-category">
+                <h3>Baby / Junior Care</h3>
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="Pictures/Baby care 1.jpg" alt="Child safety">
+                        </div>
+                        <div class="category-content">
+                            <h4>Child Safety and Supervision</h4>
+                            <p>Professional supervision ensuring your child's safety and well-being in a nurturing environment.</p>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="Pictures/Baby care 2.jpg" alt="Daily care">
+                        </div>
+                        <div class="category-content">
+                            <h4>Daily Personal and Health Care</h4>
+                            <p>Comprehensive daily care including hygiene, feeding, and health monitoring for your little ones.</p>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="Pictures/Baby care 3.jpg" alt="Educational support">
+                        </div>
+                        <div class="category-content">
+                            <h4>Developmental and Educational Support</h4>
+                            <p>Age-appropriate activities and educational support to promote healthy development and learning.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-category">
+                <h3>Elderly and Patient Care</h3>
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="Pictures/Elderly Care 1.jpg" alt="Personal care">
+                        </div>
+                        <div class="category-content">
+                            <h4>Personal Care & Living Assistance</h4>
+                            <p>Dignified assistance with daily activities including bathing, dressing, and personal hygiene.</p>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="Pictures/Elderly Care 2.jpg" alt="Health assistance">
+                        </div>
+                        <div class="category-content">
+                            <h4>Health & Medication Assistance</h4>
+                            <p>Professional health monitoring and medication management to ensure optimal well-being.</p>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="Pictures/Elderly Care 3.jpg" alt="Nutrition support">
+                        </div>
+                        <div class="category-content">
+                            <h4>Nutrition & Meal Support</h4>
+                            <p>Nutritious meal planning, preparation, and feeding assistance tailored to dietary needs.</p>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="Pictures/Elderly Care 4.jpg" alt="Companionship">
+                        </div>
+                        <div class="category-content">
+                            <h4>Companionship & Emotional Support</h4>
+                            <p>Caring companionship and emotional support to enhance quality of life and reduce isolation.</p>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="Pictures/Elderly Care 5.jpg" alt="Mobility assistance">
+                        </div>
+                        <div class="category-content">
+                            <h4>Mobility & Comfort Assistance</h4>
+                            <p>Safe mobility support and comfort care to maintain independence and dignity.</p>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="Pictures/Elderly Care 6.jpg" alt="Household support">
+                        </div>
+                        <div class="category-content">
+                            <h4>Household & Environment Support</h4>
+                            <p>Light housekeeping and environmental management to maintain a safe, clean living space.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <script>fetch('footer.html').then(response => response.text()).then(data => document.getElementById('footer-placeholder').innerHTML = data);</script>
+</body>
+</html>

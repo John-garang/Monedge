@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book - Monedge Home Care Services</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                
+                setTimeout(() => {
+                    const navbar = document.querySelector('.navbar');
+                    if (navbar) {
+                        window.addEventListener('scroll', function() {
+                            if (window.scrollY > 50) {
+                                navbar.classList.add('scrolled');
+                            } else {
+                                navbar.classList.remove('scrolled');
+                            }
+                        });
+                        
+                        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                        document.querySelectorAll('.nav-link').forEach(link => {
+                            if (link.getAttribute('href') === currentPage) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                }, 100);
+            })
+            .then(() => {
+                const script = document.createElement('script');
+                script.src = 'js/main.js';
+                document.body.appendChild(script);
+            });
+    </script>
+
+    <section class="hero" style="min-height: 100vh; background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('Pictures/contact us heroe.jpg'); background-size: cover; background-position: center;">
+        <div class="hero-content">
+            <h1>Book with us</h1>
+            <p class="tagline">Get in Touch Today</p>
+            <p class="mission">Do you need a professional Caregiver today? We are here to serve you any time, anywhere.</p>
+        </div>
+    </section>
+
+    <section style="padding: 80px 0; background: #f8f9fa;">
+        <div class="container" style="max-width: 1200px;">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: #333;">Care Plan Booking Form</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 3rem;">Complete this form to create your personalized care plan</p>
+            
+            <form id="care-plan-form" style="background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                <div style="border-left: 4px solid #f59d19; padding-left: 1.5rem; margin-bottom: 2rem;">
+                    <h3 style="color: #f59d19; margin-bottom: 1.5rem; font-size: 1.5rem;">A. Client / Responsible Party Details</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                        <div>
+                            <label for="name" style="display: block; margin-bottom: 0.5rem; color: #333; font-weight: 500;">Name *</label>
+                            <input type="text" id="name" name="name" required style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        </div>
+                        <div>
+                            <label for="phone" style="display: block; margin-bottom: 0.5rem; color: #333; font-weight: 500;">Phone *</label>
+                            <input type="tel" id="phone" name="phone" required style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="email" style="display: block; margin-bottom: 0.5rem; color: #333; font-weight: 500;">Email Address *</label>
+                        <input type="email" id="email" name="email" required style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                        <div>
+                            <label for="recipientName" style="display: block; margin-bottom: 0.5rem; color: #333; font-weight: 500;">Recipient Name *</label>
+                            <input type="text" id="recipientName" name="recipientName" required style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        </div>
+                        <div>
+                            <label for="recipientAge" style="display: block; margin-bottom: 0.5rem; color: #333; font-weight: 500;">Recipient Age *</label>
+                            <input type="number" id="recipientAge" name="recipientAge" required style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div>
+                            <label for="relationship" style="display: block; margin-bottom: 0.5rem; color: #333; font-weight: 500;">Relationship *</label>
+                            <input type="text" id="relationship" name="relationship" required style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        </div>
+                        <div>
+                            <label for="recipientAddress" style="display: block; margin-bottom: 0.5rem; color: #333; font-weight: 500;">Recipient Address *</label>
+                            <input type="text" id="recipientAddress" name="recipientAddress" required style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        </div>
+                    </div>
+                </div>
+
+                <div style="border-left: 4px solid #f59d19; padding-left: 1.5rem; margin-bottom: 2rem;">
+                    <h3 style="color: #f59d19; margin-bottom: 1.5rem; font-size: 1.5rem;">B. Type of Service Requested</h3>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+                        <label style="display: flex; align-items: center; padding: 1rem; background: #f8f9fa; border-radius: 8px; cursor: pointer;">
+                            <input type="checkbox" name="serviceType" value="Baby / Junior Care" style="margin-right: 0.75rem; width: 18px; height: 18px;">
+                            <span>Baby / Junior Care</span>
+                        </label>
+                        <label style="display: flex; align-items: center; padding: 1rem; background: #f8f9fa; border-radius: 8px; cursor: pointer;">
+                            <input type="checkbox" name="serviceType" value="Elderly / Senior Care" style="margin-right: 0.75rem; width: 18px; height: 18px;">
+                            <span>Elderly / Senior Care</span>
+                        </label>
+                        <label style="display: flex; align-items: center; padding: 1rem; background: #f8f9fa; border-radius: 8px; cursor: pointer;">
+                            <input type="checkbox" name="serviceType" value="Patient Care" style="margin-right: 0.75rem; width: 18px; height: 18px;">
+                            <span>Patient Care</span>
+                        </label>
+                        <label style="display: flex; align-items: center; padding: 1rem; background: #f8f9fa; border-radius: 8px; cursor: pointer;">
+                            <input type="checkbox" name="serviceType" value="Companionship Care" style="margin-right: 0.75rem; width: 18px; height: 18px;">
+                            <span>Companionship Care</span>
+                        </label>
+                    </div>
+
+                    <h4 style="color: #3533cd; margin: 1.5rem 0 1rem;">Service Schedule</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                        <div>
+                            <label for="startDate" style="display: block; margin-bottom: 0.5rem; color: #333; font-weight: 500;">Start Date *</label>
+                            <input type="date" id="startDate" name="startDate" required style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        </div>
+                        <div>
+                            <label for="endDate" style="display: block; margin-bottom: 0.5rem; color: #333; font-weight: 500;">End Date</label>
+                            <input type="date" id="endDate" name="endDate" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                        <div>
+                            <label for="hoursFrom" style="display: block; margin-bottom: 0.5rem; color: #333; font-weight: 500;">Hours From</label>
+                            <input type="time" id="hoursFrom" name="hoursFrom" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        </div>
+                        <div>
+                            <label for="hoursTo" style="display: block; margin-bottom: 0.5rem; color: #333; font-weight: 500;">Hours To</label>
+                            <input type="time" id="hoursTo" name="hoursTo" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        </div>
+                        <div>
+                            <label for="frequency" style="display: block; margin-bottom: 0.5rem; color: #333; font-weight: 500;">Frequency *</label>
+                            <select id="frequency" name="frequency" required style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                                <option value="">Select</option>
+                                <option value="daily">Daily</option>
+                                <option value="weekly">Weekly</option>
+                                <option value="monthly">Monthly</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="border-left: 4px solid #f59d19; padding-left: 1.5rem; margin-bottom: 2rem;">
+                    <h3 style="color: #f59d19; margin-bottom: 1.5rem; font-size: 1.5rem;">C. Scope of Service</h3>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin-bottom: 1.5rem;">
+                        <label style="display: flex; align-items: center; padding: 0.75rem; background: #f8f9fa; border-radius: 6px;">
+                            <input type="checkbox" name="scope" value="Personal Hygiene assistance" style="margin-right: 0.75rem; width: 18px; height: 18px;">
+                            <span>Personal Hygiene assistance</span>
+                        </label>
+                        <label style="display: flex; align-items: center; padding: 0.75rem; background: #f8f9fa; border-radius: 6px;">
+                            <input type="checkbox" name="scope" value="Feeding/meal preparation" style="margin-right: 0.75rem; width: 18px; height: 18px;">
+                            <span>Feeding/meal preparation</span>
+                        </label>
+                        <label style="display: flex; align-items: center; padding: 0.75rem; background: #f8f9fa; border-radius: 6px;">
+                            <input type="checkbox" name="scope" value="Mobility support" style="margin-right: 0.75rem; width: 18px; height: 18px;">
+                            <span>Mobility support</span>
+                        </label>
+                        <label style="display: flex; align-items: center; padding: 0.75rem; background: #f8f9fa; border-radius: 6px;">
+                            <input type="checkbox" name="scope" value="Medication reminders" style="margin-right: 0.75rem; width: 18px; height: 18px;">
+                            <span>Medication reminders</span>
+                        </label>
+                        <label style="display: flex; align-items: center; padding: 0.75rem; background: #f8f9fa; border-radius: 6px;">
+                            <input type="checkbox" name="scope" value="Child supervision" style="margin-right: 0.75rem; width: 18px; height: 18px;">
+                            <span>Child supervision</span>
+                        </label>
+                        <label style="display: flex; align-items: center; padding: 0.75rem; background: #f8f9fa; border-radius: 6px;">
+                            <input type="checkbox" name="scope" value="Educational support" style="margin-right: 0.75rem; width: 18px; height: 18px;">
+                            <span>Educational support</span>
+                        </label>
+                        <label style="display: flex; align-items: center; padding: 0.75rem; background: #f8f9fa; border-radius: 6px;">
+                            <input type="checkbox" name="scope" value="Companionship" style="margin-right: 0.75rem; width: 18px; height: 18px;">
+                            <span>Companionship</span>
+                        </label>
+                        <label style="display: flex; align-items: center; padding: 0.75rem; background: #f8f9fa; border-radius: 6px;">
+                            <input type="checkbox" name="scope" value="Light cleaning" style="margin-right: 0.75rem; width: 18px; height: 18px;">
+                            <span>Light cleaning</span>
+                        </label>
+                    </div>
+
+                    <h4 style="color: #3533cd; margin: 1.5rem 0 1rem;">Health & Safety Information</h4>
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="medicalConditions" style="display: block; margin-bottom: 0.5rem; color: #333; font-weight: 500;">Medical Conditions</label>
+                        <textarea id="medicalConditions" name="medicalConditions" rows="3" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; resize: vertical;"></textarea>
+                    </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="medication" style="display: block; margin-bottom: 0.5rem; color: #333; font-weight: 500;">Medication (name & timing)</label>
+                        <textarea id="medication" name="medication" rows="3" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; resize: vertical;"></textarea>
+                    </div>
+                    <div>
+                        <label for="allergies" style="display: block; margin-bottom: 0.5rem; color: #333; font-weight: 500;">Allergies / Risks</label>
+                        <textarea id="allergies" name="allergies" rows="3" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; resize: vertical;"></textarea>
+                    </div>
+                </div>
+
+                <div style="border-left: 4px solid #f59d19; padding-left: 1.5rem; margin-bottom: 2rem;">
+                    <h3 style="color: #f59d19; margin-bottom: 1.5rem; font-size: 1.5rem;">Fees & Payment Terms</h3>
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="agreedRate" style="display: block; margin-bottom: 0.5rem; color: #333; font-weight: 500;">Agreed Rate (UGX)</label>
+                        <input type="text" id="agreedRate" name="agreedRate" placeholder="To be discussed" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                    </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.75rem; color: #333; font-weight: 500;">Billing Cycle</label>
+                        <div style="display: flex; gap: 1.5rem;">
+                            <label style="display: flex; align-items: center;">
+                                <input type="radio" name="billing" value="Daily" style="margin-right: 0.5rem;">
+                                <span>Daily</span>
+                            </label>
+                            <label style="display: flex; align-items: center;">
+                                <input type="radio" name="billing" value="Weekly" style="margin-right: 0.5rem;">
+                                <span>Weekly</span>
+                            </label>
+                            <label style="display: flex; align-items: center;">
+                                <input type="radio" name="billing" value="Monthly" style="margin-right: 0.5rem;">
+                                <span>Monthly</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 0.75rem; color: #333; font-weight: 500;">Payment Method</label>
+                        <div style="display: flex; gap: 1.5rem;">
+                            <label style="display: flex; align-items: center;">
+                                <input type="radio" name="payment" value="Cash" style="margin-right: 0.5rem;">
+                                <span>Cash</span>
+                            </label>
+                            <label style="display: flex; align-items: center;">
+                                <input type="radio" name="payment" value="Mobile Money" style="margin-right: 0.5rem;">
+                                <span>Mobile Money</span>
+                            </label>
+                            <label style="display: flex; align-items: center;">
+                                <input type="radio" name="payment" value="Bank Transfer" style="margin-right: 0.5rem;">
+                                <span>Bank Transfer</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="border-left: 4px solid #f59d19; padding-left: 1.5rem; margin-bottom: 2rem;">
+                    <h3 style="color: #f59d19; margin-bottom: 1.5rem; font-size: 1.5rem;">Emergency Contacts</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                        <div>
+                            <label for="primaryContactName" style="display: block; margin-bottom: 0.5rem; color: #333; font-weight: 500;">Primary Contact Name</label>
+                            <input type="text" id="primaryContactName" name="primaryContactName" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        </div>
+                        <div>
+                            <label for="primaryContactPhone" style="display: block; margin-bottom: 0.5rem; color: #333; font-weight: 500;">Primary Contact Phone</label>
+                            <input type="tel" id="primaryContactPhone" name="primaryContactPhone" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                        <div>
+                            <label for="secondaryContactName" style="display: block; margin-bottom: 0.5rem; color: #333; font-weight: 500;">Secondary Contact Name</label>
+                            <input type="text" id="secondaryContactName" name="secondaryContactName" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        </div>
+                        <div>
+                            <label for="secondaryContactPhone" style="display: block; margin-bottom: 0.5rem; color: #333; font-weight: 500;">Secondary Contact Phone</label>
+                            <input type="tel" id="secondaryContactPhone" name="secondaryContactPhone" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="preferredClinic" style="display: block; margin-bottom: 0.5rem; color: #333; font-weight: 500;">Preferred Clinic/Hospital</label>
+                        <input type="text" id="preferredClinic" name="preferredClinic" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                    </div>
+                </div>
+
+                <div style="background: #fff3cd; padding: 1.5rem; border-radius: 10px; margin-bottom: 2rem; border-left: 4px solid #f59d19;">
+                    <h4 style="color: #856404; margin-bottom: 1rem;">Acknowledgment & Approval</h4>
+                    <p style="color: #856404; font-size: 0.95rem; margin-bottom: 0.5rem;">By submitting this form, the Client confirms that:</p>
+                    <ul style="color: #856404; font-size: 0.95rem; margin-left: 1.5rem;">
+                        <li>This Care Plan accurately reflects the agreed services</li>
+                        <li>No additional tasks may be assigned outside this document</li>
+                        <li>Any changes require written approval from Monedge</li>
+                    </ul>
+                </div>
+
+                <button type="submit" style="width: 100%; padding: 1rem; background: linear-gradient(135deg, #f59d19, #ff8c42); color: white; border: none; border-radius: 30px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">Submit Care Plan Request</button>
+            </form>
+
+            <div style="margin-top: 3rem; background: white; padding: 2.5rem; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                <h3 style="color: #f59d19; margin-bottom: 1.5rem; font-size: 1.5rem; text-align: center;">Other Ways to Reach Us</h3>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                    <a href="tel:0788370505" style="text-decoration: none; color: inherit; text-align: center; padding: 1.5rem; background: #f8f9fa; border-radius: 10px; border: 1px solid #ddd; border-bottom: 3px solid #f59d19; transition: all 0.3s ease; display: block;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(245,157,25,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                        <div style="width: 60px; height: 60px; background: #f59d19; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg>
+                        </div>
+                        <h4 style="color: #333; margin-bottom: 0.5rem;">Call Us</h4>
+                        <p style="color: #666; margin: 0;">0788-370505<br>0754-598991</p>
+                    </a>
+                    <a href="mailto:monedgehcs@gmail.com" style="text-decoration: none; color: inherit; text-align: center; padding: 1.5rem; background: #f8f9fa; border-radius: 10px; border: 1px solid #ddd; border-bottom: 3px solid #3533cd; transition: all 0.3s ease; display: block;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(53,51,205,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                        <div style="width: 60px; height: 60px; background: #3533cd; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        </div>
+                        <h4 style="color: #333; margin-bottom: 0.5rem;">Email Us</h4>
+                        <p style="color: #666; margin: 0;">monedgehcs@gmail.com</p>
+                    </a>
+                    <a href="https://wa.me/256788370505" target="_blank" style="text-decoration: none; color: inherit; text-align: center; padding: 1.5rem; background: #f8f9fa; border-radius: 10px; border: 1px solid #ddd; border-bottom: 3px solid #25d366; transition: all 0.3s ease; display: block;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(37,211,102,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                        <div style="width: 60px; height: 60px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                        </div>
+                        <h4 style="color: #333; margin-bottom: 0.5rem;">WhatsApp</h4>
+                        <p style="color: #666; margin: 0;">Chat with us</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <script>fetch('footer.html').then(response => response.text()).then(data => document.getElementById('footer-placeholder').innerHTML = data);</script>
+    <script src="js/booking-form.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Monedge Home Care Services</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                
+                setTimeout(() => {
+                    const navbar = document.querySelector('.navbar');
+                    if (navbar) {
+                        window.addEventListener('scroll', function() {
+                            if (window.scrollY > 50) {
+                                navbar.classList.add('scrolled');
+                            } else {
+                                navbar.classList.remove('scrolled');
+                            }
+                        });
+                        
+                        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                        document.querySelectorAll('.nav-link').forEach(link => {
+                            if (link.getAttribute('href') === currentPage) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                }, 100);
+            })
+            .then(() => {
+                const script = document.createElement('script');
+                script.src = 'js/main.js';
+                document.body.appendChild(script);
+            });
+    </script>
+
+    <section class="hero" style="background-color: #000; background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('Pictures/New About Heroe.jpg'); background-size: cover; background-position: top center;">
+        <div class="hero-content">
+            <h1>About Monedge Home Care</h1>
+            <p class="tagline">Compassionate Care Since Day One</p>
+            <p class="mission">Learn about our mission, values, and commitment to providing exceptional healthcare services.</p>
+        </div>
+    </section>
+
+    <section style="padding: 80px 0; background: white;">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>At Monedge Home Care Services, we believe that quality healthcare should be accessible, compassionate, and personalized. Our dedicated team of trained caregivers is committed to providing exceptional home care services that honor the dignity and independence of every individual we serve.</p>
+                    <p>We understand that choosing home care is a significant decision for you and your family. That's why we focus on building trust through consistent, reliable care that feels like family. Our comprehensive approach ensures that your loved ones receive not just medical support, but also the emotional care and companionship they deserve.</p>
+                    <p>With flexible scheduling options including daily, weekly, and monthly care plans, we adapt to your unique needs and circumstances. Our mission is simple: to keep your loved ones healthy, safe, and comfortable in the place they call home.</p>
+                </div>
+                <div class="about-image">
+                    <img src="Pictures/Baby care 9.jpg" alt="Caring healthcare professional">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #333;">Our Mission & Vision</h2>
+            <div class="features-grid">
+                <div class="feature-card" style="border: 1px solid #ddd; border-bottom: 3px solid #f59d19; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(245,157,25,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0, 0, 0, 0.08)'">
+                    <h3>Our Mission</h3>
+                    <p>To provide compassionate, professional home healthcare services that enhance the quality of life for our clients while supporting their families with peace of mind and exceptional care.</p>
+                </div>
+                <div class="feature-card" style="border: 1px solid #ddd; border-bottom: 3px solid #3533cd; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(53,51,205,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0, 0, 0, 0.08)'">
+                    <h3>Our Vision</h3>
+                    <p>To be the leading home healthcare provider in Uganda, recognized for our commitment to excellence, innovation, and the highest standards of personalized care.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 80px 0; background: #f8f9fa;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #333;">Meet Our Team</h2>
+            <div class="features-grid">
+                <div class="feature-card" style="border: 1px solid #ddd; border-bottom: 3px solid #f59d19; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(245,157,25,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0, 0, 0, 0.08)'">
+                    <div class="feature-icon">
+                        <img src="Pictures/Richard Mbusa.jpg" alt="Richard Mbusa" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
+                    </div>
+                    <h3>Richard Mbusa</h3>
+                    <p><strong>CEO & Founder</strong></p>
+                    <p>A dynamic executive leader with over seven years of experience in strategic planning, program development, and organizational leadership. Richard excels at creating impact-driven solutions with expertise in investment management, business development, and product development. MBA graduate from Uganda Management Institute and PMP student.</p>
+                </div>
+                <div class="feature-card" style="border: 1px solid #ddd; border-bottom: 3px solid #3533cd; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(53,51,205,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0, 0, 0, 0.08)'">
+                    <div class="feature-icon">
+                        <img src="Pictures/John Garang.webp" alt="John Garang" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
+                    </div>
+                    <h3>John Garang</h3>
+                    <p><strong>Chief Communications Officer</strong></p>
+                    <p>CNN Academy fellow specializing in communications, public relations, and social media for social start-ups and nonprofits across Africa. With four years of experience leading digital communications and content creation, John brings strategic expertise in stakeholder engagement and impact reporting. Currently studying Entrepreneurial Leadership at African Leadership University.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #333;">Our Values</h2>
+            <div class="features-grid">
+                <div class="feature-card" style="border: 1px solid #ddd; border-bottom: 3px solid #f59d19; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(245,157,25,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0, 0, 0, 0.08)'">
+                    <h3>Compassion</h3>
+                    <p>We approach every interaction with empathy, understanding, and genuine care for our clients and their families.</p>
+                </div>
+                <div class="feature-card" style="border: 1px solid #ddd; border-bottom: 3px solid #3533cd; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(53,51,205,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0, 0, 0, 0.08)'">
+                    <h3>Excellence</h3>
+                    <p>We maintain the highest standards in healthcare delivery, continuously improving our services and training.</p>
+                </div>
+                <div class="feature-card" style="border: 1px solid #ddd; border-bottom: 3px solid #25d366; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(37,211,102,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0, 0, 0, 0.08)'">
+                    <h3>Integrity</h3>
+                    <p>We build trust through honest communication, reliable service, and ethical practices in all our interactions.</p>
+                </div>
+                <div class="feature-card" style="border: 1px solid #ddd; border-bottom: 3px solid #f59d19; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(245,157,25,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0, 0, 0, 0.08)'">
+                    <h3>Respect</h3>
+                    <p>We honor the dignity, privacy, and individual preferences of every person we serve.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <script>fetch('footer.html').then(response => response.text()).then(data => document.getElementById('footer-placeholder').innerHTML = data);</script>
+</body>
+</html>

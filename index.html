@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monedge Home Care Services - Trusted Care, Every Day</title>
+    <meta name="description" content="Professional home healthcare services with personalized care that feels like family. Flexible hours, daily, weekly, and monthly care options.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                
+                setTimeout(() => {
+                    const navbar = document.querySelector('.navbar');
+                    if (navbar) {
+                        window.addEventListener('scroll', function() {
+                            if (window.scrollY > 50) {
+                                navbar.classList.add('scrolled');
+                            } else {
+                                navbar.classList.remove('scrolled');
+                            }
+                        });
+                        
+                        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                        document.querySelectorAll('.nav-link').forEach(link => {
+                            if (link.getAttribute('href') === currentPage) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                }, 100);
+                
+                const script = document.createElement('script');
+                script.src = 'js/main.js';
+                document.body.appendChild(script);
+            });
+    </script>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Monedge Home Care Services</h1>
+            <p class="tagline">Trusted Care, Every Day</p>
+            <p class="mission">We offer personalized homecare services that feel like family and keep your loved ones healthy.</p>
+            <div class="hero-buttons">
+                <a href="book.html" class="btn btn-primary">Request Care</a>
+                <a href="book.html" class="btn btn-secondary">Book with us</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="welcome">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">Welcome to Monedge Home Care</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 3rem;">
+                <div>
+                    <img src="Pictures/Baby care 8.jpg" alt="Professional Care" style="width: 100%; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                </div>
+                <div>
+                    <h3 style="color: #f59d19; margin-bottom: 1rem;">Your Trusted Healthcare Partner</h3>
+                    <p style="margin-bottom: 1rem;">At Monedge Home Care Services, we understand that your family deserves the best. Our professional caregivers bring compassion, expertise, and dedication to every home we serve across Kampala and surrounding areas.</p>
+                    <p style="margin-bottom: 1rem;">Whether you need care for your little ones, elderly parents, or recovering patients, we provide personalized solutions that fit your schedule and budget.</p>
+                    <a href="services.html" class="btn btn-primary">Explore Our Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: #f8f9fa; padding: 60px 0;">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">How It Works</h2>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                <div style="text-align: center; padding: 2rem; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border: 1px solid #ddd; border-bottom: 3px solid #f59d19; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(245,157,25,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.05)'">
+                    <div style="width: 60px; height: 60px; background: #f59d19; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 24px; font-weight: bold; color: white;">1</div>
+                    <h3 style="color: #f59d19; margin-bottom: 1rem;">Book a Consultation</h3>
+                    <p>Contact us via phone, email, or our online form. We'll discuss your specific care needs and preferences.</p>
+                </div>
+                <div style="text-align: center; padding: 2rem; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border: 1px solid #ddd; border-bottom: 3px solid #3533cd; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(53,51,205,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.05)'">
+                    <div style="width: 60px; height: 60px; background: #3533cd; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 24px; font-weight: bold; color: white;">2</div>
+                    <h3 style="color: #3533cd; margin-bottom: 1rem;">Get Matched</h3>
+                    <p>We carefully match you with a qualified caregiver who meets your requirements and schedule.</p>
+                </div>
+                <div style="text-align: center; padding: 2rem; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border: 1px solid #ddd; border-bottom: 3px solid #25d366; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(37,211,102,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.05)'">
+                    <div style="width: 60px; height: 60px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 24px; font-weight: bold; color: white;">3</div>
+                    <h3 style="color: #25d366; margin-bottom: 1rem;">Start Care</h3>
+                    <p>Your dedicated caregiver begins providing compassionate, professional care tailored to your loved one's needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 60px 0;">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">Our Care Services</h2>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-bottom: 2rem;">
+                <div style="background: linear-gradient(135deg, #f59d19, #ff8c42); padding: 3rem; border-radius: 15px; color: white; text-align: center;">
+                    <h3 style="font-size: 2rem; margin-bottom: 1rem;">Baby & Junior Care</h3>
+                    <p style="margin-bottom: 1.5rem;">Professional childcare services including supervision, daily care, and developmental support for your little ones.</p>
+                    <a href="services.html" class="btn" style="background: white; color: #f59d19; padding: 0.75rem 2rem; border-radius: 25px; text-decoration: none; display: inline-block;">Learn More</a>
+                </div>
+                <div style="background: linear-gradient(135deg, #3533cd, #5b59ed); padding: 3rem; border-radius: 15px; color: white; text-align: center;">
+                    <h3 style="font-size: 2rem; margin-bottom: 1rem;">Elderly & Patient Care</h3>
+                    <p style="margin-bottom: 1.5rem;">Compassionate care for seniors and patients including personal care, health monitoring, and companionship.</p>
+                    <a href="services.html" class="btn" style="background: white; color: #3533cd; padding: 0.75rem 2rem; border-radius: 25px; text-decoration: none; display: inline-block;">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: #f8f9fa; padding: 60px 0;">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">What Our Clients Say</h2>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border: 1px solid #ddd; border-bottom: 3px solid #f59d19; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(245,157,25,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.05)'">
+                    <p style="font-style: italic; margin-bottom: 1rem; color: #666;">"Monedge Home Care has been a blessing for our family. The caregiver assigned to my mother is professional, caring, and reliable. Highly recommended!"</p>
+                    <p style="font-weight: bold; color: #f59d19;">- Sarah M., Kampala</p>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border: 1px solid #ddd; border-bottom: 3px solid #3533cd; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(53,51,205,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.05)'">
+                    <p style="font-style: italic; margin-bottom: 1rem; color: #666;">"The baby care service is exceptional. I can go to work knowing my child is in safe, loving hands. Thank you Monedge!"</p>
+                    <p style="font-weight: bold; color: #3533cd;">- James K., Entebbe</p>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border: 1px solid #ddd; border-bottom: 3px solid #25d366; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(37,211,102,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.05)'">
+                    <p style="font-style: italic; margin-bottom: 1rem; color: #666;">"Professional, compassionate, and flexible. Monedge Home Care exceeded our expectations in every way."</p>
+                    <p style="font-weight: bold; color: #25d366;">- Grace N., Wakiso</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 60px 0;">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">Why Families Choose Us</h2>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;">
+                <div style="text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 10px; border: 1px solid #ddd; border-bottom: 3px solid #f59d19; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(245,157,25,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="#f59d19" style="margin: 0 auto 1rem; display: block;"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <h3 style="color: #333; margin-bottom: 0.5rem;">Certified Caregivers</h3>
+                    <p style="color: #666;">All staff are trained and certified professionals</p>
+                </div>
+                <div style="text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 10px; border: 1px solid #ddd; border-bottom: 3px solid #3533cd; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(53,51,205,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="#3533cd" style="margin: 0 auto 1rem; display: block;"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                    <h3 style="color: #333; margin-bottom: 0.5rem;">Flexible Hours</h3>
+                    <p style="color: #666;">Daily, weekly, or monthly care options</p>
+                </div>
+                <div style="text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 10px; border: 1px solid #ddd; border-bottom: 3px solid #25d366; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(37,211,102,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="#25d366" style="margin: 0 auto 1rem; display: block;"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+                    <h3 style="color: #333; margin-bottom: 0.5rem;">Affordable Rates</h3>
+                    <p style="color: #666;">Quality care that fits your budget</p>
+                </div>
+                <div style="text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 10px; border: 1px solid #ddd; border-bottom: 3px solid #f59d19; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(245,157,25,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="#f59d19" style="margin: 0 auto 1rem; display: block;"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2c0-4.97-4.03-9-9-9v2c3.87 0 7 3.13 7 7zm-4 0h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3z"/></svg>
+                    <h3 style="color: #333; margin-bottom: 0.5rem;">24/7 Support</h3>
+                    <p style="color: #666;">Always available when you need us</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: linear-gradient(135deg, #3533cd, #5b59ed); padding: 60px 0; text-align: center; color: white; margin-bottom: 0;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Get Started?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Book a free consultation today and discover how we can help your family</p>
+            <div style="display: flex; gap: 1rem; justify-content: center;">
+                <a href="book.html" class="btn" style="background: #f59d19; color: white; padding: 1rem 2.5rem; border-radius: 30px; text-decoration: none; font-weight: bold;">Book Now</a>
+                <a href="tel:0788370505" class="btn" style="background: white; color: #3533cd; padding: 1rem 2.5rem; border-radius: 30px; text-decoration: none; font-weight: bold;">Call Us</a>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <script>fetch('footer.html').then(response => response.text()).then(data => document.getElementById('footer-placeholder').innerHTML = data);</script>
+</body>
+</html>
