@@ -57,6 +57,14 @@
             <p style="text-align: center; color: #666; margin-bottom: 3rem;">Complete this form to create your personalized care plan</p>
             
             <form id="care-plan-form" style="background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                <style>
+                    @media (max-width: 768px) {
+                        #care-plan-form { padding: 1.5rem !important; }
+                        #care-plan-form > div { padding-left: 1rem !important; }
+                        #care-plan-form div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+                        #care-plan-form div[style*="display: flex"] { flex-direction: column !important; gap: 1rem !important; }
+                    }
+                </style>
                 <div style="border-left: 4px solid #f59d19; padding-left: 1.5rem; margin-bottom: 2rem;">
                     <h3 style="color: #f59d19; margin-bottom: 1.5rem; font-size: 1.5rem;">A. Client / Responsible Party Details</h3>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
@@ -283,7 +291,12 @@
                 <button type="submit" style="width: 100%; padding: 1rem; background: linear-gradient(135deg, #f59d19, #ff8c42); color: white; border: none; border-radius: 30px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">Submit Care Plan Request</button>
             </form>
 
-            <div style="margin-top: 3rem; background: white; padding: 2.5rem; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                <div style="margin-top: 3rem; background: white; padding: 2.5rem; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                <style>
+                    @media (max-width: 768px) {
+                        div[style*="grid-template-columns: repeat(3"] { grid-template-columns: 1fr !important; }
+                    }
+                </style>
                 <h3 style="color: #f59d19; margin-bottom: 1.5rem; font-size: 1.5rem; text-align: center;">Other Ways to Reach Us</h3>
                 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
                     <a href="tel:0788370505" style="text-decoration: none; color: inherit; text-align: center; padding: 1.5rem; background: #f8f9fa; border-radius: 10px; border: 1px solid #ddd; border-bottom: 3px solid #f59d19; transition: all 0.3s ease; display: block;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(245,157,25,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
