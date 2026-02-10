@@ -604,6 +604,10 @@ p {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
@@ -624,6 +628,11 @@ p {
     .nav-menu.active {
         left: 0;
     }
+    
+    .nav-menu .nav-link {
+        color: #333;
+        background: rgba(0, 0, 0, 0.08);
+    }
 
     .nav-toggle {
         display: flex;
@@ -639,6 +648,18 @@ p {
 
     .nav-toggle.active .bar:nth-child(3) {
         transform: translateY(-6px) rotate(-45deg);
+    }
+    
+    .hero {
+        padding: 80px 20px 40px;
+    }
+    
+    .tagline {
+        font-size: 24px;
+    }
+    
+    .mission {
+        font-size: 16px;
     }
 
     .hero-content {
@@ -665,11 +686,20 @@ p {
     .container {
         padding: 0 16px;
     }
+    
+    .services h2,
+    .why-choose h2 {
+        font-size: 2rem;
+    }
 }
 
 @media (max-width: 600px) {
     .services-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .nav-container {
+        padding: 10px 15px;
     }
 }
 
@@ -687,5 +717,17 @@ p {
     .service-card,
     .feature-card {
         padding: 24px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .tagline {
+        font-size: 20px;
+    }
+    
+    .mission {
+        font-size: 14px;
     }
 }
