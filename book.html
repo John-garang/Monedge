@@ -76,7 +76,15 @@
             <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #333;">Book</h2>
             
             <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTsA6x2W9LJ20Pkhq8ydHZM1zKw_xLLJVClb1MJvhXVvAuVQ/viewform?embedded=true" width="100%" height="2000" frameborder="0" marginheight="0" marginwidth="0" style="border-radius: 10px;">Loading…</iframe>
+                <style>
+                    @media (max-width: 768px) {
+                        .google-form-container { padding: 0.5rem !important; }
+                        .google-form-container iframe { height: 2500px !important; }
+                    }
+                </style>
+                <div class="google-form-container">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTsA6x2W9LJ20Pkhq8ydHZM1zKw_xLLJVClb1MJvhXVvAuVQ/viewform" width="100%" height="2200" frameborder="0" marginheight="0" marginwidth="0" style="border-radius: 10px;">Loading…</iframe>
+                </div>
             </div>
 
                 <div style="margin-top: 3rem; background: white; padding: 2.5rem; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
