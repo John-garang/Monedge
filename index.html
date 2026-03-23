@@ -24,6 +24,7 @@
             max-width: 1200px;
             margin: 0 auto;
             width: 100%;
+            padding: 0 1.5rem;
         }
         .hero-tagline {
             font-family: 'Source Serif 4', serif;
@@ -87,8 +88,39 @@
             color: rgba(255,255,255,0.7);
         }
         @media (max-width: 768px) {
-            .hero-stats { gap: 1.5rem; }
+            .hero-new {
+                padding: 5rem 1.25rem 3rem;
+                align-items: flex-end;
+            }
+            .hero-new h1 {
+                font-size: clamp(2rem, 9vw, 3rem);
+                margin-bottom: 1rem;
+            }
+            .hero-tagline {
+                font-size: 0.75rem;
+                margin-bottom: 1rem;
+            }
+            .hero-description {
+                font-size: 0.975rem;
+                margin-bottom: 1.5rem;
+            }
+            .hero-buttons-group {
+                flex-direction: column;
+                margin-bottom: 1.5rem;
+            }
+            .hero-buttons-group .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            .hero-stats {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.25rem;
+                padding-top: 1.25rem;
+                margin-top: 1.25rem;
+            }
             .stat-number { font-size: 1.25rem; }
+            .stat-label { font-size: 0.7rem; }
         }
 
         .service-card-modern {

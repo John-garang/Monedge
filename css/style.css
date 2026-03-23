@@ -137,12 +137,8 @@ small, .text-sm {
 @media (min-width: 1200px) {
     .container {
         max-width: 1200px;
-    }
-}
-
-@media (min-width: 1400px) {
-    .container {
-        max-width: 1400px;
+        padding-right: 2.5rem;
+        padding-left: 2.5rem;
     }
 }
 
