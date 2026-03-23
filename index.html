@@ -8,7 +8,6 @@
     <link rel="icon" type="image/png" href="Pictures/Monedge Favicon.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
     <div id="header-placeholder"></div>
@@ -17,18 +16,12 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header-placeholder').innerHTML = data;
-                
                 setTimeout(() => {
                     const navbar = document.querySelector('.navbar');
                     if (navbar) {
                         window.addEventListener('scroll', function() {
-                            if (window.scrollY > 50) {
-                                navbar.classList.add('scrolled');
-                            } else {
-                                navbar.classList.remove('scrolled');
-                            }
+                            navbar.classList.toggle('scrolled', window.scrollY > 50);
                         });
-                        
                         const currentPage = window.location.pathname;
                         document.querySelectorAll('.nav-link').forEach(link => {
                             const href = link.getAttribute('href');
@@ -38,8 +31,6 @@
                                 link.classList.add('active');
                             }
                         });
-                        
-                        // Mobile nav
                         const navToggle = document.getElementById('nav-toggle');
                         const navMenu = document.getElementById('nav-menu');
                         if (navToggle && navMenu) {
@@ -56,14 +47,13 @@
                         }
                     }
                 }, 100);
-                
                 const script = document.createElement('script');
                 script.src = 'js/main.js';
                 document.body.appendChild(script);
             });
     </script>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Monedge Home Care Services</h1>
@@ -76,124 +66,130 @@
         </div>
     </section>
 
+    <!-- Welcome -->
     <section class="welcome">
         <div class="container">
-            <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">Welcome to Monedge Home Care</h2>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 3rem;" class="welcome-grid">
-                <div>
-                    <img src="Pictures/Baby care 8.jpg" alt="Professional Care" style="width: 100%; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            <h2 class="section-title">Welcome to Monedge Home Care</h2>
+            <div class="welcome-grid">
+                <div class="welcome-image">
+                    <img src="Pictures/Baby care 8.jpg" alt="Professional Care">
                 </div>
-                <div>
-                    <h3 style="color: #f59d19; margin-bottom: 1rem;">Your Trusted Healthcare Partner</h3>
-                    <p style="margin-bottom: 1rem;">At Monedge Home Care Services, we understand that your family deserves the best. Our professional caregivers bring compassion, expertise, and dedication to every home we serve across Kampala and surrounding areas.</p>
-                    <p style="margin-bottom: 1rem;">Whether you need care for your little ones, elderly parents, or recovering patients, we provide personalized solutions that fit your schedule and budget.</p>
-                    <a href="/services" class="btn btn-primary">Explore Our Services</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section style="background: #f8f9fa; padding: 60px 0;">
-        <div class="container">
-            <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">How It Works</h2>
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;" class="how-it-works-grid">
-                <div style="text-align: center; padding: 2rem; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border: 1px solid #ddd; border-bottom: 3px solid #f59d19; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(245,157,25,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.05)'">
-                    <div style="width: 60px; height: 60px; background: #f59d19; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 24px; font-weight: bold; color: white;">1</div>
-                    <h3 style="color: #f59d19; margin-bottom: 1rem;">Book a Consultation</h3>
-                    <p>Contact us via phone, email, or our online form. We'll discuss your specific care needs and preferences.</p>
-                </div>
-                <div style="text-align: center; padding: 2rem; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border: 1px solid #ddd; border-bottom: 3px solid #3533cd; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(53,51,205,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.05)'">
-                    <div style="width: 60px; height: 60px; background: #3533cd; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 24px; font-weight: bold; color: white;">2</div>
-                    <h3 style="color: #3533cd; margin-bottom: 1rem;">Get Matched</h3>
-                    <p>We carefully match you with a qualified caregiver who meets your requirements and schedule.</p>
-                </div>
-                <div style="text-align: center; padding: 2rem; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border: 1px solid #ddd; border-bottom: 3px solid #25d366; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(37,211,102,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.05)'">
-                    <div style="width: 60px; height: 60px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 24px; font-weight: bold; color: white;">3</div>
-                    <h3 style="color: #25d366; margin-bottom: 1rem;">Start Care</h3>
-                    <p>Your dedicated caregiver begins providing compassionate, professional care tailored to your loved one's needs.</p>
+                <div class="welcome-text">
+                    <h3 class="subsection-title">Your Trusted Healthcare Partner</h3>
+                    <p>At Monedge Home Care Services, we understand that your family deserves the best. Our professional caregivers bring compassion, expertise, and dedication to every home we serve across Kampala and surrounding areas.</p>
+                    <p>Whether you need care for your little ones, elderly parents, or recovering patients, we provide personalized solutions that fit your schedule and budget.</p>
+                    <a href="services.html" class="btn btn-primary">Explore Our Services</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section style="padding: 60px 0;">
+    <!-- How It Works -->
+    <section class="how-it-works">
         <div class="container">
-            <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">Our Care Services</h2>
-            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-bottom: 2rem;" class="services-cards-grid">
-                <div style="background: linear-gradient(135deg, #f59d19, #ff8c42); padding: 3rem; border-radius: 15px; color: white; text-align: center;">
-                    <h3 style="font-size: 2rem; margin-bottom: 1rem;">Baby & Junior Care</h3>
-                    <p style="margin-bottom: 1.5rem;">Professional childcare services including supervision, daily care, and developmental support for your little ones.</p>
-                    <a href="/services" class="btn" style="background: white; color: #f59d19; padding: 0.75rem 2rem; border-radius: 25px; text-decoration: none; display: inline-block;">Learn More</a>
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps-grid">
+                <div class="step-card step-card--primary">
+                    <div class="step-number step-number--primary">1</div>
+                    <h3 class="card-title">Book a Consultation</h3>
+                    <p class="card-body">Contact us via phone, email, or our online form. We'll discuss your specific care needs and preferences.</p>
                 </div>
-                <div style="background: linear-gradient(135deg, #3533cd, #5b59ed); padding: 3rem; border-radius: 15px; color: white; text-align: center;">
-                    <h3 style="font-size: 2rem; margin-bottom: 1rem;">Elderly & Patient Care</h3>
-                    <p style="margin-bottom: 1.5rem;">Compassionate care for seniors and patients including personal care, health monitoring, and companionship.</p>
-                    <a href="/services" class="btn" style="background: white; color: #3533cd; padding: 0.75rem 2rem; border-radius: 25px; text-decoration: none; display: inline-block;">Learn More</a>
+                <div class="step-card step-card--secondary">
+                    <div class="step-number step-number--secondary">2</div>
+                    <h3 class="card-title">Get Matched</h3>
+                    <p class="card-body">We carefully match you with a qualified caregiver who meets your requirements and schedule.</p>
+                </div>
+                <div class="step-card step-card--accent">
+                    <div class="step-number step-number--accent">3</div>
+                    <h3 class="card-title">Start Care</h3>
+                    <p class="card-body">Your dedicated caregiver begins providing compassionate, professional care tailored to your loved one's needs.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section style="background: #f8f9fa; padding: 60px 0;">
+    <!-- Care Services -->
+    <section class="care-services">
         <div class="container">
-            <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">What Our Clients Say</h2>
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;" class="testimonials-grid">
-                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border: 1px solid #ddd; border-bottom: 3px solid #f59d19; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(245,157,25,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.05)'">
-                    <p style="font-style: italic; margin-bottom: 1rem; color: #666;">"Monedge Home Care has been a blessing for our family. The caregiver assigned to my mother is professional, caring, and reliable. Highly recommended!"</p>
-                    <p style="font-weight: bold; color: #f59d19;">- Sarah M., Kampala</p>
+            <h2 class="section-title">Our Care Services</h2>
+            <div class="services-cards-grid">
+                <div class="service-banner service-banner--primary">
+                    <h3 class="banner-title">Baby &amp; Junior Care</h3>
+                    <p class="banner-body">Professional childcare services including supervision, daily care, and developmental support for your little ones.</p>
+                    <a href="services.html" class="btn btn-banner">Learn More</a>
                 </div>
-                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border: 1px solid #ddd; border-bottom: 3px solid #3533cd; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(53,51,205,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.05)'">
-                    <p style="font-style: italic; margin-bottom: 1rem; color: #666;">"The baby care service is exceptional. I can go to work knowing my child is in safe, loving hands. Thank you Monedge!"</p>
-                    <p style="font-weight: bold; color: #3533cd;">- James K., Entebbe</p>
-                </div>
-                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border: 1px solid #ddd; border-bottom: 3px solid #25d366; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(37,211,102,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.05)'">
-                    <p style="font-style: italic; margin-bottom: 1rem; color: #666;">"Professional, compassionate, and flexible. Monedge Home Care exceeded our expectations in every way."</p>
-                    <p style="font-weight: bold; color: #25d366;">- Grace N., Wakiso</p>
+                <div class="service-banner service-banner--secondary">
+                    <h3 class="banner-title">Elderly &amp; Patient Care</h3>
+                    <p class="banner-body">Compassionate care for seniors and patients including personal care, health monitoring, and companionship.</p>
+                    <a href="services.html" class="btn btn-banner btn-banner--secondary">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section style="padding: 60px 0;">
+    <!-- Testimonials -->
+    <section class="testimonials">
         <div class="container">
-            <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">Why Families Choose Us</h2>
-            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;" class="why-choose-grid">
-                <div style="text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 10px; border: 1px solid #ddd; border-bottom: 3px solid #f59d19; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(245,157,25,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                    <svg width="60" height="60" viewBox="0 0 24 24" fill="#f59d19" style="margin: 0 auto 1rem; display: block;"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                    <h3 style="color: #333; margin-bottom: 0.5rem;">Certified Caregivers</h3>
-                    <p style="color: #666;">All staff are trained and certified professionals</p>
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonials-grid">
+                <article class="testimonial-card testimonial-card--primary">
+                    <p class="testimonial-text">"Monedge Home Care has been a blessing for our family. The caregiver assigned to my mother is professional, caring, and reliable. Highly recommended!"</p>
+                    <p class="testimonial-author testimonial-author--primary">— Sarah M., Kampala</p>
+                </article>
+                <article class="testimonial-card testimonial-card--secondary">
+                    <p class="testimonial-text">"The baby care service is exceptional. I can go to work knowing my child is in safe, loving hands. Thank you Monedge!"</p>
+                    <p class="testimonial-author testimonial-author--secondary">— James K., Entebbe</p>
+                </article>
+                <article class="testimonial-card testimonial-card--accent">
+                    <p class="testimonial-text">"Professional, compassionate, and flexible. Monedge Home Care exceeded our expectations in every way."</p>
+                    <p class="testimonial-author testimonial-author--accent">— Grace N., Wakiso</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-home">
+        <div class="container">
+            <h2 class="section-title">Why Families Choose Us</h2>
+            <div class="why-choose-grid">
+                <div class="why-card why-card--primary">
+                    <svg class="why-icon" viewBox="0 0 24 24" fill="#f59d19"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <h3 class="card-title">Certified Caregivers</h3>
+                    <p class="card-body">All staff are trained and certified professionals</p>
                 </div>
-                <div style="text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 10px; border: 1px solid #ddd; border-bottom: 3px solid #3533cd; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(53,51,205,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                    <svg width="60" height="60" viewBox="0 0 24 24" fill="#3533cd" style="margin: 0 auto 1rem; display: block;"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-                    <h3 style="color: #333; margin-bottom: 0.5rem;">Flexible Hours</h3>
-                    <p style="color: #666;">Daily, weekly, or monthly care options</p>
+                <div class="why-card why-card--secondary">
+                    <svg class="why-icon" viewBox="0 0 24 24" fill="#3533cd"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                    <h3 class="card-title">Flexible Hours</h3>
+                    <p class="card-body">Daily, weekly, or monthly care options</p>
                 </div>
-                <div style="text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 10px; border: 1px solid #ddd; border-bottom: 3px solid #25d366; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(37,211,102,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                    <svg width="60" height="60" viewBox="0 0 24 24" fill="#25d366" style="margin: 0 auto 1rem; display: block;"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
-                    <h3 style="color: #333; margin-bottom: 0.5rem;">Affordable Rates</h3>
-                    <p style="color: #666;">Quality care that fits your budget</p>
+                <div class="why-card why-card--accent">
+                    <svg class="why-icon" viewBox="0 0 24 24" fill="#25d366"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+                    <h3 class="card-title">Affordable Rates</h3>
+                    <p class="card-body">Quality care that fits your budget</p>
                 </div>
-                <div style="text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 10px; border: 1px solid #ddd; border-bottom: 3px solid #f59d19; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(245,157,25,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                    <svg width="60" height="60" viewBox="0 0 24 24" fill="#f59d19" style="margin: 0 auto 1rem; display: block;"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2c0-4.97-4.03-9-9-9v2c3.87 0 7 3.13 7 7zm-4 0h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3z"/></svg>
-                    <h3 style="color: #333; margin-bottom: 0.5rem;">24/7 Support</h3>
-                    <p style="color: #666;">Always available when you need us</p>
+                <div class="why-card why-card--primary">
+                    <svg class="why-icon" viewBox="0 0 24 24" fill="#f59d19"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2c0-4.97-4.03-9-9-9v2c3.87 0 7 3.13 7 7zm-4 0h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3z"/></svg>
+                    <h3 class="card-title">24/7 Support</h3>
+                    <p class="card-body">Always available when you need us</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section style="background: linear-gradient(135deg, #3533cd, #5b59ed); padding: 60px 0; text-align: center; color: white; margin-bottom: 0;">
+    <!-- CTA -->
+    <section class="cta-section">
         <div class="container">
-            <h2 style="font-size: 1.75rem; margin-bottom: 1rem;">Ready to Get Started?</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Book a free consultation today and discover how we can help your family</p>
-            <div style="display: flex; gap: 1rem; justify-content: center;">
-                <a href="/book" class="btn" style="background: #f59d19; color: white; padding: 1rem 2.5rem; border-radius: 30px; text-decoration: none; font-weight: bold;">Book Now</a>
-                <a href="tel:0788370505" class="btn" style="background: white; color: #3533cd; padding: 1rem 2.5rem; border-radius: 30px; text-decoration: none; font-weight: bold;">Call Us</a>
+            <h2 class="cta-title">Ready to Get Started?</h2>
+            <p class="cta-body">Book a free consultation today and discover how we can help your family</p>
+            <div class="cta-buttons">
+                <a href="book.html" class="btn btn-cta-primary">Book Now</a>
+                <a href="tel:0788370505" class="btn btn-cta-secondary">Call Us</a>
             </div>
         </div>
     </section>
 
     <div id="footer-placeholder"></div>
-    <script>fetch('footer.html').then(response => response.text()).then(data => document.getElementById('footer-placeholder').innerHTML = data);</script>
+    <script>fetch('footer.html').then(r => r.text()).then(d => document.getElementById('footer-placeholder').innerHTML = d);</script>
 </body>
 </html>
