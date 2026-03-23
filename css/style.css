@@ -794,7 +794,7 @@ label {
 
     .services-grid { grid-template-columns: 1fr; }
 
-    .nav-container { padding: 0.625rem 1rem; }
+    .nav-container { padding: 0.469rem 1rem; }
 
     .hero-buttons {
         flex-direction: column;
@@ -806,5 +806,158 @@ label {
     .service-card,
     .feature-card {
         padding: 1.25rem;
+    }
+}
+
+/* ============================================================
+   MOBILE — ALL INLINE GRIDS & INDEX PAGE LAYOUTS
+   ============================================================ */
+@media (max-width: 768px) {
+
+    /* Stats bar */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+    }
+
+    /* Service cards grid (index) */
+    [style*="grid-template-columns: repeat(auto-fit, minmax(350px"],
+    [style*="grid-template-columns: repeat(auto-fit, minmax(320px"] {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* 2-col grids → 1 col */
+    [style*="grid-template-columns: 1fr 1fr"],
+    [style*="grid-template-columns: repeat(2, 1fr)"] {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    /* 3-col grids → 1 col */
+    [style*="grid-template-columns: repeat(3, 1fr)"],
+    [style*="grid-template-columns: 1fr 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    /* 4-col grids → 2 col */
+    [style*="grid-template-columns: repeat(4, 1fr)"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+    }
+
+    /* About section 2fr 1fr */
+    [style*="grid-template-columns: 2fr 1fr"] {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    /* Values grid inside about (2x2) */
+    [style*="grid-template-columns: 1fr 1fr"][style*="gap: 2rem"] {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Service banners */
+    .services-cards-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Testimonials */
+    .testimonials-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Why choose grid */
+    .why-choose-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    /* Steps grid */
+    .steps-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Welcome grid */
+    .welcome-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Footer grid */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+    }
+
+    /* CTA buttons */
+    .cta-buttons,
+    [style*="display: flex"][style*="justify-content: center"][style*="gap: 1rem"] {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Hero section padding */
+    .hero {
+        padding: 4rem 1rem 2rem;
+        min-height: 80vh;
+    }
+
+    /* Section padding */
+    [style*="padding: 5rem 0"] {
+        padding: 2.5rem 0 !important;
+    }
+
+    [style*="padding: 60px 0"] {
+        padding: 2.5rem 0 !important;
+    }
+
+    [style*="padding: 80px 0"] {
+        padding: 2.5rem 0 !important;
+    }
+
+    /* Service banner padding */
+    .service-banner {
+        padding: 2rem 1.5rem !important;
+    }
+
+    /* Portfolio cards image height */
+    .portfolio-image {
+        height: 160px !important;
+    }
+
+    /* Book page contact cards */
+    [style*="grid-template-columns: repeat(3, 1fr)"] {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Stats → 1 col on very small screens */
+    .stats-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Why choose → 1 col */
+    .why-choose-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Footer → 1 col */
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Reduce hero h1 further */
+    .hero h1 {
+        font-size: 1.75rem !important;
+    }
+
+    .tagline {
+        font-size: 1.1rem !important;
+    }
+
+    /* Full-width buttons */
+    .btn {
+        width: 100%;
+        justify-content: center;
     }
 }
