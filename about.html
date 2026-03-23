@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Monedge Home Care Services</title>
+    <meta name="description" content="Learn about Monedge Home Care's mission, vision, values, and dedicated team of professional caregivers providing compassionate home healthcare.">
     <link rel="icon" type="image/png" href="Pictures/Monedge Favicon.png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -62,7 +62,8 @@
             });
     </script>
 
-    <section class="hero" style="background-color: #000; background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('Pictures/New About Heroe.jpg'); background-size: cover; background-position: top center;">
+    <!-- Hero Section -->
+    <section class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Pictures/New About Heroe.jpg'); background-size: cover; background-position: top center;">
         <div class="hero-content">
             <h1>About Monedge Home Care</h1>
             <p class="tagline">Compassionate Care Since Day One</p>
@@ -70,7 +71,8 @@
         </div>
     </section>
 
-    <section style="padding: 80px 0; background: white;">
+    <!-- Our Story Section -->
+    <section style="padding: 4rem 0; background: hsl(var(--background));">
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
@@ -86,15 +88,26 @@
         </div>
     </section>
 
+    <!-- Mission & Vision Section -->
     <section class="why-choose">
         <div class="container">
-            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #333;">Our Mission & Vision</h2>
+            <h2 class="section-title">Our Mission & Vision</h2>
             <div class="features-grid">
-                <div class="feature-card" style="border: 1px solid #ddd; border-bottom: 3px solid #f59d19; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(245,157,25,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0, 0, 0, 0.08)'">
+                <div class="feature-card">
+                    <div style="width: 48px; height: 48px; background: rgba(245,157,25,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--color-primary)">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                        </svg>
+                    </div>
                     <h3>Our Mission</h3>
                     <p>To provide compassionate, professional home healthcare services that enhance the quality of life for our clients while supporting their families with peace of mind and exceptional care.</p>
                 </div>
-                <div class="feature-card" style="border: 1px solid #ddd; border-bottom: 3px solid #3533cd; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(53,51,205,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0, 0, 0, 0.08)'">
+                <div class="feature-card">
+                    <div style="width: 48px; height: 48px; background: rgba(53,51,205,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--color-secondary)">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 4c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm0 13c-2.33 0-4.31-1.46-5.11-3.5h10.22c-.8 2.04-2.78 3.5-5.11 3.5z"/>
+                        </svg>
+                    </div>
                     <h3>Our Vision</h3>
                     <p>To be the leading home healthcare provider in Uganda, recognized for our commitment to excellence, innovation, and the highest standards of personalized care.</p>
                 </div>
@@ -102,67 +115,101 @@
         </div>
     </section>
 
-    <section style="padding: 80px 0; background: #f8f9fa;">
+    <!-- Meet Our Team Section -->
+    <section style="padding: 4rem 0; background: hsl(var(--background));">
         <div class="container">
-            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #333;">Meet Our Team</h2>
+            <h2 class="section-title">Meet Our Team</h2>
             <div class="features-grid">
-                <div class="feature-card" style="border: 1px solid #ddd; border-bottom: 3px solid #f59d19; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(245,157,25,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0, 0, 0, 0.08)'">
+                <!-- Richard Mbusa -->
+                <div class="feature-card" style="text-align: center;">
                     <div class="feature-icon">
                         <img src="Pictures/Richard Mbusa.jpg" alt="Richard Mbusa" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
                     </div>
                     <h3>Richard Mbusa</h3>
-                    <p><strong>CEO & Founder</strong></p>
-                    <p>Executive leader with 7+ years in strategic planning and organizational leadership. MBA graduate from Uganda Management Institute, with expertise in investment management and business development.</p>
-                    <a href="https://www.linkedin.com/in/richard-mbusa-4592b1141/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 1rem; color: #0077b5; text-decoration: none; font-weight: 600;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#0077b5"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                        LinkedIn
+                    <p style="font-weight: 600; color: var(--color-primary); margin-bottom: 0.5rem;">CEO & Founder</p>
+                    <p style="font-size: 0.875rem;">Executive leader with 7+ years in strategic planning and organizational leadership. MBA graduate from Uganda Management Institute, with expertise in investment management and business development.</p>
+                    <a href="https://www.linkedin.com/in/richard-mbusa-4592b1141/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1rem; color: #0077b5; text-decoration: none; font-weight: 500; font-size: 0.875rem;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#0077b5">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                        LinkedIn Profile
                     </a>
                 </div>
-                <div class="feature-card" style="border: 1px solid #ddd; border-bottom: 3px solid #3533cd; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(53,51,205,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0, 0, 0, 0.08)'">
+
+                <!-- John Garang -->
+                <div class="feature-card" style="text-align: center;">
                     <div class="feature-icon">
                         <img src="Pictures/John Garang.webp" alt="John Garang" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
                     </div>
                     <h3>John Garang</h3>
-                    <p><strong>Co-Founder & COO</strong></p>
-                    <p>CNN Academy fellow with 4 years driving operations, stakeholder engagement, and impact reporting across Africa. Oversees day-to-day service delivery at Monedge. Studying Entrepreneurial Leadership at African Leadership University.</p>
-                    <a href="https://www.linkedin.com/in/j-garang/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 1rem; color: #0077b5; text-decoration: none; font-weight: 600;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#0077b5"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                        LinkedIn
+                    <p style="font-weight: 600; color: var(--color-secondary); margin-bottom: 0.5rem;">Co-Founder & COO</p>
+                    <p style="font-size: 0.875rem;">CNN Academy fellow with 4 years driving operations, stakeholder engagement, and impact reporting across Africa. Oversees day-to-day service delivery at Monedge. Studying Entrepreneurial Leadership at African Leadership University.</p>
+                    <a href="https://www.linkedin.com/in/j-garang/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1rem; color: #0077b5; text-decoration: none; font-weight: 500; font-size: 0.875rem;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#0077b5">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                        LinkedIn Profile
                     </a>
                 </div>
-                <div class="feature-card" style="border: 1px solid #ddd; border-bottom: 3px solid #25d366; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(37,211,102,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0, 0, 0, 0.08)'">
+
+                <!-- Ayen Ayor Anyang -->
+                <div class="feature-card" style="text-align: center;">
                     <div class="feature-icon">
                         <img src="Pictures/Ayen Ayor Anyang.jpg" alt="Ayen Ayor Anyang" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
                     </div>
                     <h3>Ayen Ayor Anyang</h3>
-                    <p><strong>Care Program Lead</strong></p>
-                    <p>Final-year nursing student at Mount Kigali University with clinical placements at Rwanda Military Hospital, Ndera Neuropsychiatric Hospital, and four district health centres. Specialises in wound care, drug administration, and patient-centred care.</p>
-                    <a href="https://www.linkedin.com/in/ayen-rachel-6b60b5345/details/experience/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 1rem; color: #0077b5; text-decoration: none; font-weight: 600;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#0077b5"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                        LinkedIn
+                    <p style="font-weight: 600; color: var(--color-accent); margin-bottom: 0.5rem;">Care Program Lead</p>
+                    <p style="font-size: 0.875rem;">Final-year nursing student at Mount Kigali University with clinical placements at Rwanda Military Hospital, Ndera Neuropsychiatric Hospital, and four district health centres. Specialises in wound care, drug administration, and patient-centred care.</p>
+                    <a href="https://www.linkedin.com/in/ayen-rachel-6b60b5345/details/experience/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1rem; color: #0077b5; text-decoration: none; font-weight: 500; font-size: 0.875rem;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#0077b5">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                        LinkedIn Profile
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Our Values Section -->
     <section class="why-choose">
         <div class="container">
-            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #333;">Our Values</h2>
+            <h2 class="section-title">Our Values</h2>
             <div class="features-grid">
-                <div class="feature-card" style="border: 1px solid #ddd; border-bottom: 3px solid #f59d19; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(245,157,25,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0, 0, 0, 0.08)'">
+                <div class="feature-card">
+                    <div style="width: 48px; height: 48px; background: rgba(245,157,25,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--color-primary)">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
                     <h3>Compassion</h3>
                     <p>We approach every interaction with empathy, understanding, and genuine care for our clients and their families.</p>
                 </div>
-                <div class="feature-card" style="border: 1px solid #ddd; border-bottom: 3px solid #3533cd; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(53,51,205,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0, 0, 0, 0.08)'">
+                <div class="feature-card">
+                    <div style="width: 48px; height: 48px; background: rgba(53,51,205,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--color-secondary)">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
                     <h3>Excellence</h3>
                     <p>We maintain the highest standards in healthcare delivery, continuously improving our services and training.</p>
                 </div>
-                <div class="feature-card" style="border: 1px solid #ddd; border-bottom: 3px solid #25d366; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(37,211,102,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0, 0, 0, 0.08)'">
+                <div class="feature-card">
+                    <div style="width: 48px; height: 48px; background: rgba(37,211,102,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--color-accent)">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                        </svg>
+                    </div>
                     <h3>Integrity</h3>
                     <p>We build trust through honest communication, reliable service, and ethical practices in all our interactions.</p>
                 </div>
-                <div class="feature-card" style="border: 1px solid #ddd; border-bottom: 3px solid #f59d19; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(245,157,25,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0, 0, 0, 0.08)'">
+                <div class="feature-card">
+                    <div style="width: 48px; height: 48px; background: rgba(245,157,25,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--color-primary)">
+                            <path d="M12 12c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 4c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm0 12c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+                        </svg>
+                    </div>
                     <h3>Respect</h3>
                     <p>We honor the dignity, privacy, and individual preferences of every person we serve.</p>
                 </div>

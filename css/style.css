@@ -1,5 +1,10 @@
 /* ============================================================
-   RESET & BASE
+   FONTS (from sample)
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:wght@400;500;600;700&display=swap');
+
+/* ============================================================
+   RESET & BASE (from sample styling)
    ============================================================ */
 *, *::before, *::after {
     margin: 0;
@@ -7,7 +12,11 @@
     box-sizing: border-box;
 }
 
+/* ============================================================
+   CSS VARIABLES - YOUR COLORS PRESERVED
+   ============================================================ */
 :root {
+    /* Your original colors */
     --color-primary:   #f59d19;
     --color-secondary: #3533cd;
     --color-accent:    #25d366;
@@ -16,13 +25,30 @@
     --color-muted:     #666;
     --color-bg:        #f8f9fa;
     --color-white:     #ffffff;
-    --radius-sm:       0.5rem;
-    --radius-md:       0.75rem;
-    --radius-lg:       1rem;
-    --radius-pill:     9999px;
-    --shadow-card:     0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.02);
-    --shadow-hover:    0 20px 40px -8px rgba(0,0,0,0.12);
-    --transition:      all 0.2s ease;
+    
+    /* Typography variables from sample */
+    --background: 0 0% 100%;
+    --foreground: 260 24% 16%;
+    --muted: 280 28% 94%;
+    --muted-foreground: 260 16% 38%;
+    --card: 0 0% 100%;
+    --card-foreground: 260 24% 16%;
+    --border: 280 22% 88%;
+    --radius: 0.75rem;
+    
+    /* Shadows from sample */
+    --shadow-soft: 0 16px 40px -20px rgba(0,0,0,0.08);
+    --shadow-card: 0 18px 40px -18px rgba(0,0,0,0.08);
+    --shadow-elevated: 0 28px 70px -28px rgba(0,0,0,0.12);
+    
+    /* Your original radii */
+    --radius-sm: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-pill: 9999px;
+    
+    /* Your original transitions */
+    --transition: all 0.2s ease;
 }
 
 html {
@@ -31,50 +57,93 @@ html {
 }
 
 body {
-    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     font-size: 1rem;
     line-height: 1.5;
-    color: var(--color-text);
-    background: var(--color-white);
+    color: hsl(var(--foreground));
+    background: hsl(var(--background));
+    -webkit-font-smoothing: antialiased;
 }
 
 /* ============================================================
-   TYPOGRAPHY
+   TYPOGRAPHY (from sample)
    ============================================================ */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 700;
+    letter-spacing: -0.025em;
     line-height: 1.2;
     margin-bottom: 0.5em;
-    color: var(--color-text);
+    color: hsl(var(--foreground));
 }
 
-h1 { font-size: 2.5rem;  font-weight: 700; line-height: 1.2; }
-h2 { font-size: 2rem;    font-weight: 600; line-height: 1.3; }
-h3 { font-size: 1.5rem;  font-weight: 600; line-height: 1.4; }
-h4 { font-size: 1.25rem; font-weight: 500; line-height: 1.4; }
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.125rem; }
+h6 { font-size: 1rem; }
 
 p {
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.625;
     margin-bottom: 1em;
-    color: var(--color-muted);
+    color: hsl(var(--muted-foreground));
 }
 
 small, .text-sm {
     font-size: 0.875rem;
-    line-height: 1.4;
+    line-height: 1.25rem;
+}
+
+/* Utility text classes from sample */
+.text-muted-foreground {
+    color: hsl(var(--muted-foreground));
+}
+
+.text-foreground {
+    color: hsl(var(--foreground));
 }
 
 /* ============================================================
-   LAYOUT
+   LAYOUT (from sample)
    ============================================================ */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
     width: 100%;
-    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1400px;
+    }
 }
 
 section {
@@ -83,7 +152,7 @@ section {
 }
 
 /* ============================================================
-   NAVIGATION
+   NAVIGATION (preserved with sample typography)
    ============================================================ */
 .navbar {
     position: fixed;
@@ -99,7 +168,7 @@ section {
 .navbar.scrolled {
     background: rgba(255,255,255,0.98);
     backdrop-filter: blur(20px);
-    box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+    box-shadow: var(--shadow-soft);
 }
 
 .navbar.scrolled .nav-logo h2 { color: var(--color-primary); }
@@ -122,9 +191,10 @@ section {
 }
 
 .nav-logo h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Source Serif 4', Georgia, serif;
     font-size: 1.5rem;
     font-weight: 700;
+    letter-spacing: -0.025em;
     color: white;
     transition: var(--transition);
 }
@@ -168,7 +238,7 @@ section {
 }
 
 .navbar.scrolled .nav-link {
-    color: var(--color-text);
+    color: hsl(var(--foreground));
     background: rgba(0,0,0,0.06);
 }
 
@@ -208,10 +278,10 @@ section {
     border-radius: 2px;
 }
 
-.navbar.scrolled .bar { background: var(--color-text); }
+.navbar.scrolled .bar { background: hsl(var(--foreground)); }
 
 /* ============================================================
-   HERO
+   HERO (preserved with sample typography)
    ============================================================ */
 .hero {
     min-height: 100vh;
@@ -235,18 +305,20 @@ section {
 }
 
 .hero h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Source Serif 4', Georgia, serif;
     font-size: clamp(2.5rem, 8vw, 4rem);
     font-weight: 700;
+    letter-spacing: -0.025em;
     color: #f5f5f5;
     margin-bottom: clamp(1rem, 3vw, 2rem);
     line-height: 1.1;
 }
 
 .tagline {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Source Serif 4', Georgia, serif;
     font-size: clamp(1.25rem, 4vw, 2.375rem);
     font-weight: 400;
+    letter-spacing: -0.025em;
     color: #d1d1d1;
     margin-bottom: 1.5rem;
 }
@@ -254,7 +326,7 @@ section {
 .mission {
     font-size: clamp(1rem, 2vw, 1.1875rem);
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 1.625;
     max-width: 600px;
     margin: 0 auto 2rem;
     color: #cfcfcf;
@@ -268,7 +340,7 @@ section {
 }
 
 /* ============================================================
-   BUTTONS
+   BUTTONS (preserved)
    ============================================================ */
 .btn {
     display: inline-flex;
@@ -315,43 +387,44 @@ section {
 }
 
 /* ============================================================
-   CARDS (shared)
+   CARDS (updated with sample shadows)
    ============================================================ */
 .feature-card,
 .category-card,
 .service-card {
-    background: var(--color-white);
+    background: hsl(var(--card));
     border-radius: var(--radius-md);
     padding: 1.5rem;
     transition: var(--transition);
     box-shadow: var(--shadow-card);
+    border: 1px solid hsl(var(--border));
 }
 
 .feature-card:hover,
 .category-card:hover,
 .service-card:hover {
     transform: translateY(-4px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: var(--shadow-elevated);
 }
 
 /* ============================================================
    WELCOME SECTION
    ============================================================ */
 .welcome {
-    background: white;
+    background: hsl(var(--background));
 }
 
 /* ============================================================
    SERVICES SECTION
    ============================================================ */
 .services {
-    background: white;
+    background: hsl(var(--background));
 }
 
 .services h2 {
     text-align: center;
     margin-bottom: 3rem;
-    color: var(--color-text);
+    color: hsl(var(--foreground));
 }
 
 .service-category {
@@ -380,7 +453,6 @@ section {
 }
 
 .category-card {
-    border: 1px solid #e5e7eb;
     border-bottom: 3px solid var(--color-primary);
     overflow: hidden;
     padding: 0;
@@ -412,18 +484,17 @@ section {
     font-size: 1.125rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: var(--color-text);
+    color: hsl(var(--foreground));
 }
 
 .category-content p {
-    color: var(--color-muted);
-    line-height: 1.5;
+    color: hsl(var(--muted-foreground));
+    line-height: 1.625;
     margin: 0;
     font-size: 0.9375rem;
 }
 
 .service-card {
-    border: 1px solid #e5e7eb;
     border-bottom: 3px solid var(--color-primary);
     text-align: center;
     position: relative;
@@ -460,11 +531,11 @@ section {
     font-size: 1.125rem;
     font-weight: 600;
     margin-bottom: 0.75rem;
-    color: var(--color-text);
+    color: hsl(var(--foreground));
 }
 
 .service-card p {
-    color: var(--color-muted);
+    color: hsl(var(--muted-foreground));
     font-size: 0.875rem;
     line-height: 1.5;
 }
@@ -483,14 +554,14 @@ section {
     font-size: clamp(1.75rem, 3vw, 2.25rem);
     font-weight: 700;
     margin-bottom: 1.5rem;
-    color: var(--color-text);
+    color: hsl(var(--foreground));
 }
 
 .about-text p {
     margin-bottom: 1.25rem;
     font-size: 1rem;
-    line-height: 1.6;
-    color: var(--color-muted);
+    line-height: 1.625;
+    color: hsl(var(--muted-foreground));
 }
 
 .about-image img {
@@ -498,7 +569,7 @@ section {
     height: 400px;
     object-fit: cover;
     border-radius: var(--radius-md);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-card);
 }
 
 /* ============================================================
@@ -522,7 +593,7 @@ section {
 .why-choose h2 {
     text-align: center;
     margin-bottom: 3rem;
-    color: var(--color-text);
+    color: hsl(var(--foreground));
     position: relative;
     z-index: 2;
 }
@@ -536,7 +607,6 @@ section {
 }
 
 .feature-card {
-    border: 1px solid #e5e7eb;
     border-bottom: 3px solid var(--color-primary);
     text-align: center;
     position: relative;
@@ -574,8 +644,8 @@ section {
 }
 
 .feature-card p {
-    color: var(--color-muted);
-    line-height: 1.5;
+    color: hsl(var(--muted-foreground));
+    line-height: 1.625;
     position: relative;
     z-index: 2;
     margin: 0;
@@ -594,13 +664,13 @@ section {
 input, textarea, select {
     width: 100%;
     padding: 0.75rem 1rem;
-    border: 1px solid #d1d5db;
+    border: 1px solid hsl(var(--border));
     border-radius: var(--radius-sm);
-    font-family: inherit;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
     font-size: 1rem;
     line-height: 1.5;
-    color: var(--color-text);
-    background: white;
+    color: hsl(var(--foreground));
+    background: hsl(var(--background));
     transition: var(--transition);
 }
 
@@ -615,7 +685,7 @@ label {
     font-weight: 500;
     font-size: 0.9375rem;
     margin-bottom: 0.5rem;
-    color: var(--color-text);
+    color: hsl(var(--foreground));
 }
 
 /* ============================================================
@@ -624,7 +694,7 @@ label {
 .section-title {
     text-align: center;
     margin-bottom: 3rem;
-    color: var(--color-text);
+    color: hsl(var(--foreground));
 }
 
 /* ============================================================
@@ -660,7 +730,7 @@ label {
 }
 
 /* ============================================================
-   RESPONSIVE — MOBILE (≤640px)
+   RESPONSIVE — MOBILE (≤768px)
    ============================================================ */
 @media (max-width: 768px) {
     section {
@@ -668,16 +738,21 @@ label {
         padding-bottom: 2.5rem;
     }
 
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
     .nav-menu {
         position: fixed;
         left: -60%;
         top: 45px;
         flex-direction: column;
-        background: white;
+        background: hsl(var(--background));
         width: 60%;
         text-align: left;
         transition: left 0.3s ease;
-        box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        box-shadow: var(--shadow-soft);
         padding: 2rem 1.5rem;
         gap: 1rem;
         align-items: flex-start;
@@ -686,7 +761,7 @@ label {
     .nav-menu.active { left: 0; }
 
     .nav-menu .nav-link {
-        color: var(--color-text);
+        color: hsl(var(--foreground));
         background: rgba(0,0,0,0.06);
         width: 100%;
     }
@@ -709,14 +784,6 @@ label {
     .services-grid,
     .features-grid {
         grid-template-columns: 1fr;
-    }
-
-    .welcome-grid,
-    .how-it-works-grid,
-    .services-cards-grid,
-    .testimonials-grid,
-    .why-choose-grid {
-        grid-template-columns: 1fr !important;
     }
 }
 
