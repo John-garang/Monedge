@@ -125,7 +125,7 @@
 
         .service-card-modern {
             background: hsl(var(--card));
-            border-radius: 1.5rem;
+            border-radius: 0.5rem;
             padding: 2rem;
             transition: all 0.3s ease;
             border: 1px solid hsl(var(--border));
@@ -135,18 +135,13 @@
         .service-card-modern:hover {
             transform: translateY(-8px);
             border-color: var(--color-primary);
-            box-shadow: 0 20px 40px -20px rgba(0,0,0,0.15);
+            box-shadow: 0 20px 50px -12px rgba(0,0,0,0.18);
         }
         
         .icon-wrapper {
             width: 64px;
             height: 64px;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            transition: all 0.3s ease;
+            border-radius: 8px;
         }
         
         .service-card-modern:hover .icon-wrapper {
@@ -164,7 +159,7 @@
         
         .portfolio-card {
             background: hsl(var(--card));
-            border-radius: 1rem;
+            border-radius: 0.5rem;
             overflow: hidden;
             transition: all 0.3s ease;
             border: 1px solid hsl(var(--border));
@@ -192,7 +187,7 @@
         
         .contact-card {
             background: hsl(var(--card));
-            border-radius: 1rem;
+            border-radius: 0.5rem;
             padding: 2rem;
             text-align: center;
             transition: all 0.3s ease;
@@ -202,11 +197,12 @@
         .contact-card:hover {
             transform: translateY(-5px);
             border-color: var(--color-primary);
+            box-shadow: 0 20px 50px -12px rgba(0,0,0,0.18);
         }
         
         .testimonial-card {
             background: hsl(var(--card));
-            border-radius: 1rem;
+            border-radius: 0.5rem;
             padding: 2rem;
             border: 1px solid hsl(var(--border));
             transition: all 0.3s ease;
@@ -214,7 +210,7 @@
         
         .testimonial-card:hover {
             transform: translateY(-5px);
-            box-shadow: var(--shadow-card);
+            box-shadow: 0 20px 50px -12px rgba(0,0,0,0.18);
         }
     </style>
 </head>
@@ -410,7 +406,7 @@
     </section>
 
     <!-- Success Stories / Portfolio Section -->
-    <section style="padding: 5rem 0; background: linear-gradient(135deg, #faf7fc 0%, #f5f0f9 100%);">
+    <section style="padding: 5rem 0; background: #ffffff;">
         <div class="container">
             <div style="text-align: center; max-width: 700px; margin: 0 auto 4rem auto;">
                 <span class="tag" style="background: rgba(53,51,205,0.1); color: var(--color-secondary); margin-bottom: 1rem; display: inline-block;">Success Stories</span>
