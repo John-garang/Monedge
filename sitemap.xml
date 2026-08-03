@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Home -->
+  <url>
+    <loc>https://www.monedgehcs.com/</loc>
+    <lastmod>2025-07-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.monedgehcs.com/Pictures/Landing%20page%20heroe.jpg</image:loc>
+      <image:title>Monedge Home Care Services – Trusted Care, Every Day</image:title>
+      <image:caption>Professional home healthcare services in Kampala, Uganda</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.monedgehcs.com/Pictures/Monedge%20Home%20Care%20Logo.png</image:loc>
+      <image:title>Monedge Home Care Logo</image:title>
+    </image:image>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://www.monedgehcs.com/about</loc>
+    <lastmod>2025-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.monedgehcs.com/Pictures/New%20About%20Heroe.jpg</image:loc>
+      <image:title>About Monedge Home Care – Our Team and Mission</image:title>
+      <image:caption>Compassionate home care team serving families across Uganda</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.monedgehcs.com/Pictures/Richard%20Mbusa.jpg</image:loc>
+      <image:title>Richard Mbusa – CEO &amp; Founder, Monedge Home Care</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.monedgehcs.com/Pictures/Ayen%20Ayor%20Anyang.jpg</image:loc>
+      <image:title>Ayen Ayor Anyang – Care Program Lead, Monedge Home Care</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.monedgehcs.com/Pictures/Baby%20care%209.jpg</image:loc>
+      <image:title>Professional caregiver providing home care in Uganda</image:title>
+    </image:image>
+  </url>
+
+  <!-- Services -->
+  <url>
+    <loc>https://www.monedgehcs.com/services</loc>
+    <lastmod>2025-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.monedgehcs.com/Pictures/services%20heroe.jpg</image:loc>
+      <image:title>Home Care Services – Baby Care, Elderly Care &amp; Patient Care in Uganda</image:title>
+      <image:caption>Comprehensive home healthcare services by Monedge</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.monedgehcs.com/Pictures/Baby%20care%201.jpg</image:loc>
+      <image:title>Child Safety and Supervision – Baby Care Service</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.monedgehcs.com/Pictures/Baby%20care%202.jpg</image:loc>
+      <image:title>Daily Personal and Health Care for Children</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.monedgehcs.com/Pictures/Baby%20care%203.jpg</image:loc>
+      <image:title>Developmental and Educational Support for Children</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.monedgehcs.com/Pictures/Elderly%20Care%201.jpg</image:loc>
+      <image:title>Personal Care and Living Assistance for Elderly</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.monedgehcs.com/Pictures/Elderly%20Care%202.jpg</image:loc>
+      <image:title>Health and Medication Assistance for Elderly Patients</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.monedgehcs.com/Pictures/Elderly%20Care%203.jpg</image:loc>
+      <image:title>Nutrition and Meal Support for Elderly Care</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.monedgehcs.com/Pictures/Elderly%20Care%204.jpg</image:loc>
+      <image:title>Companionship and Emotional Support for Seniors</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.monedgehcs.com/Pictures/Elderly%20Care%205.jpg</image:loc>
+      <image:title>Mobility and Comfort Assistance for Elderly</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.monedgehcs.com/Pictures/Elderly%20Care%206.jpg</image:loc>
+      <image:title>Household and Environment Support for Home Care Clients</image:title>
+    </image:image>
+  </url>
+
+  <!-- Why Choose Us -->
+  <url>
+    <loc>https://www.monedgehcs.com/why-choose</loc>
+    <lastmod>2025-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.monedgehcs.com/Pictures/why%20choose%20us.jpg</image:loc>
+      <image:title>Why Choose Monedge Home Care Services</image:title>
+      <image:caption>Excellence in every aspect of home healthcare</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.monedgehcs.com/Pictures/black%20african%20nurse%20and%20elder.jpg</image:loc>
+      <image:title>Trained African caregiver providing elderly care at home</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.monedgehcs.com/Pictures/Baby%20care%205.jpg</image:loc>
+      <image:title>Flexible scheduling for baby and child care services</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.monedgehcs.com/Pictures/Baby%20care%206.jpg</image:loc>
+      <image:title>Family-centered home care approach</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.monedgehcs.com/Pictures/Baby%20care%207.jpg</image:loc>
+      <image:title>Trust and professionalism in home care services</image:title>
+    </image:image>
+  </url>
+
+  <!-- Book -->
+  <url>
+    <loc>https://www.monedgehcs.com/book</loc>
+    <lastmod>2025-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.monedgehcs.com/Pictures/contact%20us%20heroe.jpg</image:loc>
+      <image:title>Book a Home Care Service – Monedge Home Care</image:title>
+      <image:caption>Book professional caregivers in Kampala and across Uganda</image:caption>
+    </image:image>
+  </url>
+
+</urlset>

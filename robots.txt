@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+Disallow: /js/
+Disallow: /css/
+Disallow: /*.bat$
+Disallow: /*.md$
+Disallow: /*.yaml$
+
+Sitemap: https://www.monedgehcs.com/sitemap.xml
